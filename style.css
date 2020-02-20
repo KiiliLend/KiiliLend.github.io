@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic:400,400i,700,700i|Open+Sans:300,300i,400,400i,600i&display=swap&subset=latin-ext');
+
+
+/* HEADER */
+header .header-banner {
+
+/* background-image: url("https://degustibusnyc.com/wp-content/uploads/2019/07/1550809028.jpg"); url("img/header.png");*/
+  width: 100%;
+  height: calc(100vh - 500px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table; /* et pealkirjad paigutuksid tabelina */
+}
+
+header .logo {
+  display: table-cell; /* pealkirjad tabelina!! ja paigutab sisu keskele */
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+
+header .banner-img {
+
+ background-image: url("https://degustibusnyc.com/wp-content/uploads/2019/07/1550809028.jpg") ; /* url("img/header.png");*/
+  width: 100%;
+  height: 200px;
+}
+
+header h1 {
+  font-family: "Gentium Basic", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 60px;
+  color: steelblue;
+  line-height: 70px;
+  text-transform: uppercase; 
+  text-shadow: 2px 2px 8px #000000;
+}
+
+header h2 {
+  font-family: "Open Sans", serif; 
+  font-style: italic;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 5px;
+  color: steelblue;
+  text-transform: uppercase;
+}
+
+header nav ul {
+
+  display: block;
+  margin: 0 auto;
+  text-align: center; /*IE*/
+  width: fit-content;
+}
+
+header nav ul li {
+
+  display: inline-block;
+  padding: 16px 16px;
+}
+
+nav ul li a {
+
+font-family: "Open Sans", sans-serif;
+font-weight: 400;
+font-size: 18px;
+letter-spacing: 3px;
+color: #172029;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+/* DESKTOP VERS  laius > 950px*/
+@media only screen and (min-width: 950px) {   
+    header .header-banner {
+          height: calc(100vh - 300px);
+    }   
+
+    header h1 a {
+          font-size: 80px;
+    }  
+
+    header h2 {
+          font-size: 24px;
+          margin-top: 20px;
+    }
+
+    header nav ul li {
+           padding: 16px 42px;
+    }
+}
+
+
+/* MAIN */
+/* lehe põhiosa e galerii */
+/* veergudest: 
+https://learn.shayhowe.com/html-css/positioning-content/  
+https://internetingishard.com/html-and-css/floats/
+*/
+
+/* Meist ja koka pilt */
+.container .col {
+  width: 50%;
+  float: left;
+}
+
+/* koka pilt */
+.container .pilt{
+    width: 50%;
+    height: 50%;
+    margin-top: 20px;
+    padding: 35px; 
+}
+
+/* MOBIIL ekraani laius < 950px*/
+ @media only screen and (max-width: 950px) {
+   .container .col{
+      float: none;
+      width: 100%;
+   }
+   /* .col.pildiga div lisatud et mõjuks koka pildile*/
+   .container .col.pildiga {
+          display: none;
+  } 
+}
+
+/* Nö. galerii osa */
+.gallery-image img { /* galerii pildid ümaraks */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.gallery-image {
+  margin: 10px;
+  position: relative;
+  text-align: center;  
+    /* 3 rida lisatud hiljem nö mobiilivers jaoks*/
+  /*kuigi uuematel brauseri versioonidel peaks ka prefiksiteta töötama*/
+  -webkit-flex-basis: 300px; 
+  -moz-flex-basis: 300px;
+  flex-basis: 300px; 
+  } 
+  
+.post-header{
+ 
+/*kujundus*/
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 3px;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 9px #111111;
+
+   /*positsioneerimine*/
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+} 
+
+.gallery-links {
+
+  display: flex;
+  flex-flow: row wrap;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: -moz-flex;
+  -moz-flex-flow: row wrap;
+  justify-content: center;
+  -o-flex-flow: row wrap;
+  justify-content: center;
+
+  }
+
+
+/* FOOTER */
+footer {
+
+  width: calc(100% - 80px);
+  padding: 40px 40px;
+  background-color: #172029;
+  margin-top: 20px;
+  overflow: hidden; /* lisatud: kuna elemendid nö ujuvad "float" konteineris, ei tea konteiner, kui suur ta peab olema. Olukorra parandamiseks lisame footer deklaratsioonile sellise rea. */  
+}
+
+footer ul {
+
+  width: fit-content;
+  float: left;
+  padding-left: 0px;
+}
+
+footer ul li {
+
+  display: block;
+  padding: 0 0 20px 0;
+}
+
+footer ul li p {
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ffffff;
+ /* text-transform: uppercase;*/
+}
+
+footer ul li a {
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+  }
+
+/* sots.võrgustike ikoonid paremale */
+.footer-sm {
+  width: 32px;
+  float: right; /* float: justify; <- vale!! */
+  }
+
+.footer-sm img {
+  width: 100%;
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+  }
