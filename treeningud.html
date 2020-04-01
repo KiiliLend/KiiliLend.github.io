@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,24 +9,22 @@
         <link rel="stylesheet" href="style.css" />  
     </head>
     <body>
-        <header>
-           
-                  
-          <div class="topnav">
+               <header>
+            
+            <div class="topnav">
               <img src="logo.svg" width="145">
-              <div class="lingid">
               <a href="#">KONTAKT</a>
               <a href="treenerid.html">TREENERID</a>
               <a href="#">HINNAKIRI</a>
-              <a href="treeningud.html">TREENINGUD</a>
-              <a href="#"><span class="punane">LIITU KLUBIGA</span></a>
-              </div>
-		</div>
-            </header>
+              <a href="treeningud.html"><U>TREENINGUD</U></a>
+  <a href="index.html"><span class="punane">LIITU KLUBIGA</span></a>
+</div> 
+        </header>
+        
         <main>
-            <section class="taustapilt">
-                
-            <div id="mySidebar" class="sidebar">
+			
+            <section class="sektsiooniEraldaja">
+			<div id="mySidebar" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                 <img src="logo.svg" width="145">
                 <a href="#"><span class="punane">LIITU KLUBIGA</span></a>
@@ -36,20 +33,31 @@
                 <a href="treenerid.html">TREENERID</a>
                 <a href="#">KONTAKT</a>
             </div>
-
-            <div id="main">
+			  <div id="main">
                 <button class="openbtn" onclick="openNav()">☰</button>  
             </div>   
-                
-                
-             <div class="sisutekst">
-                    <h2><span class="kollane vari">REIU </span> <span class="roosa vari"> Sulgpalliklubi</span></h2>
-                    <h1><span class="roosa vari">Soovid liituda</span> <span class="kollane vari">sulgpalli treeningutega? </span></h1>
-                    <button><span class="punane">LIITU!</span></button>
-                </div> 
             </section>
+			
+			<h3>Treeningud</h3> 
+			<div class="container">
+				<section class="t_tekst">                                      
+						<p>Lorem Ipsum. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+						<br> Maecenas nisl: 
+						<ul>
+						<li> Mauris ante ligula, facilisis sed ornare eu.</li>
+						<li> Mauris ante ligula, facilisis sed ornare eu.</li> 
+						<li> Mauris ante ligula, facilisis sed ornare eu.</li> 
+						<li> Mauris ante ligula, facilisis sed ornare eu.</li> 
+						</ul> 
+				</section>
+				
+						<section class="t_pilt">
+							<img src="pilt.jpg" width="75%" height="75%" >   
+						</section>
+			</div>
+			
         </main>
-        <script>
+		<script>
             function openNav() {
                 document.getElementById("mySidebar").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
@@ -60,7 +68,15 @@
                 document.getElementById("main").style.marginLeft= "0";
             }
         </script>
+         <footer>
+            
+            <div class="jalus">
+                <p>&copy; Reiu Sulgpalliklubi 2020<br>
+               
+            </div>    
+		
+        </footer>
     </body>
-</html>   
+</html>
 
-         
+
