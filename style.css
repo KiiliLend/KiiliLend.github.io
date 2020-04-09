@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&subset=latin-ext");
 
-body { margin:0px; padding:0px } 
 /*HEADER*/
+
 
 .topnav {
   background-color: #F9CB41;;
@@ -20,12 +20,25 @@ font-family: "Impact";
 font-weight: 100;
 }
 
+.topnav a:hover {
+
+  color: #f1f1f1;
+  
+}
+
 .topnav img {
   float: left;
   padding: 0px 16px;
     
  
 }
+@media only screen and (max-width: 1170px) {
+    .topnav a{
+        padding: 50px 5px;
+        font-size: 30px;
+        }
+}
+
 @media only screen and (min-width: 950px){
     #mySidebar{
         display: none;
@@ -44,7 +57,7 @@ font-weight: 100;
     }
     
     .sidebar img {
-        padding: 0px 16px 0px 60px;
+        padding: 0px 16px 0px 30px;
 		float: middle;
     }
     
@@ -98,7 +111,8 @@ font-weight: 100;
 }
 
 #main {
-  transition: margin-left .5s;
+    position
+ transition: margin-left .5s;
   padding: 16px;
 }
 
@@ -114,7 +128,7 @@ font-weight: 100;
 
 .taustapilt{
     width:100%;
-    height: calc(80vh);
+    height: calc(90vh);
     background-image: url("taust.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -161,6 +175,10 @@ h2 {
 .punane {
     color: #FE361C;
 }
+.punane:hover{
+    color: #f1f1f1;
+
+}
 
 .kollane {
     color: #F9CB41;
@@ -192,7 +210,7 @@ h3 {
 .container .t_pilt {
 	width: 45%;
 	float: right;
-	padding: 15px;
+	/*padding: 15px;*/
 	margin-bottom: 100px;
 }
 
@@ -204,6 +222,9 @@ h3 {
 	float: left;
 	width: 45%;
 }
+ .container .t_tekst ul li{
+        margin-left: 20px;
+    }
 
 .jalus{
     text-align: center;
@@ -224,6 +245,32 @@ footer{
 
 .sektsiooniEraldaja{
     margin-top:40px;
+}
+
+@media only screen and (max-width: 950px){
+    h3 {
+    margin-left:20px;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 28px;
+    color: #C65046;
+    padding-bottom: 25px;
+}
+    .container .t_tekst{
+    font-size: 16px;
+    margin-left: 20px;
+    line-height: 25px;
+	width: 90%;
+    padding-bottom: 20px;
+}
+   .container .t_pilt {
+	width: 100%;
+	float: left;
+    margin-left: 20px;
+	margin-bottom: 30px;
+}
+   
+    
 }
 
 /*treenerite lehe css*/
@@ -270,7 +317,47 @@ h4 {
     color: #F9CB41;
 }
 
-/* mobiilivaate seadistus */
+/*treenerite lehe mobiilivaade*/
+
+
+@media only screen and (max-width: 950px){
+    
+img {
+  width: 80%;
+  height: auto;
+}
+    
+.treenerid {
+    margin-left: 0px;
+}
+    
+.treeneripilt{
+    float: left; 
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-right: 0px; 
+}
+
+.tekst{
+   
+    font-family: "Arial";
+    font-size: 16px;
+    padding-right: 0px;
+    margin-left:10px;
+    line-height: 25px;
+}
+    
+h4 {
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+    color: #F9CB41;
+}
+    
+}
+
+/* esilehe mobiilivaate seadistus */
 @media only screen and (max-width: 950px) {
 
 h1 {
